@@ -1,0 +1,37 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 0
+  object Calendar1: TCalendar
+    Date = 43499.000000000000000000
+    Position.X = 232.000000000000000000
+    Position.Y = 160.000000000000000000
+    Size.Width = 180.000000000000000000
+    Size.Height = 160.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object DateEdit1: TDateEdit
+    Date = 43499.000000000000000000
+    Position.X = 232.000000000000000000
+    Position.Y = 112.000000000000000000
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Text = #30002#23376' '#20057#19985' '#19993#23493' '#19969#21359
+    Position.X = 344.000000000000000000
+    Position.Y = 112.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+end
