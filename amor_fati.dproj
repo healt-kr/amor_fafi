@@ -125,6 +125,7 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="calendar_unit.pas"/>
+        <DCCReference Include="SexagesimalCalendar.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
