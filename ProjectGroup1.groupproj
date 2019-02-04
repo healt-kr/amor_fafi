@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8C83C415-829B-43DD-8431-6CBD0F010419}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="amor_fati.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConvertWon2Amor.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="amor_fati">
+        <MSBuild Projects="amor_fati.dproj"/>
+    </Target>
+    <Target Name="amor_fati:Clean">
+        <MSBuild Projects="amor_fati.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="amor_fati:Make">
+        <MSBuild Projects="amor_fati.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConvertWon2Amor">
+        <MSBuild Projects="ConvertWon2Amor.dproj"/>
+    </Target>
+    <Target Name="ConvertWon2Amor:Clean">
+        <MSBuild Projects="ConvertWon2Amor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConvertWon2Amor:Make">
+        <MSBuild Projects="ConvertWon2Amor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="amor_fati;ConvertWon2Amor"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="amor_fati:Clean;ConvertWon2Amor:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="amor_fati:Make;ConvertWon2Amor:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
